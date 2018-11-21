@@ -1,9 +1,14 @@
 pipeline {
     agent {dockerfile true}
     stages{
-        stage("clone"){
+        stage("Tuildout"){
             steps{
-                git "https://github.com/oxydedefer/buildout.jenkins.test.git"
+                sh "cd /usr/src/app && bin/buildout"
+            }
+        }
+        stage("Test"){
+            steps{
+                sh "cd /usr/src/app && bin/test"
             }
         }
     }
