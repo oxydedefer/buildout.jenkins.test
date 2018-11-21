@@ -1,6 +1,11 @@
-@Library('common-lib-seb') _
+pipeline {
+    agent {dockerfile true}
+    stages{
+        stage("clone"){
+            steps{
+                git "https://github.com/oxydedefer/buildout.jenkins.test.git"
+            }
+        }
+    }
 
-buildout {
-   projectName = "Project1"
-   serverDomain = "Project1 Server Domain"
 }
