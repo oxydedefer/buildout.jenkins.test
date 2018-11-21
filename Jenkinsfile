@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("Tuildout"){
             steps{
-                sh "cd /usr/src/app && bin/buildout"
+                sh "buildout"
             }
         }
         stage("Test"){
