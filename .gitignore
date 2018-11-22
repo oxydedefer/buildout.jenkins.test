@@ -271,3 +271,4 @@ pip-selfcheck.json
 /.Dockerfile.swp
 /parts/*
 
+/local/*
